@@ -11,10 +11,10 @@ void arraySorting(int* array, const int& lenght) {
 }
 
 int main() {
-  const int lenght = 3;
+  const int lenght = 5;
 
-  int a[lenght] { 9, 8, 7 };
-  int b[lenght] { 6, 5, 4 };
+  int a[lenght] { 9, 8, 7, 6, 5 };
+  int b[lenght] { 4, 3, 2, 1, 0 };
 
   const int cLenght = 2 * lenght;
   int c[cLenght];
