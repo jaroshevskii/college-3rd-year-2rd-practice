@@ -1,25 +1,22 @@
 #include <iostream>
-#include <cstring>
-
-void print(char* array, const int lenght) {
-  for (int i = 0; i < lenght; ++i) {
-    std::cout << array[i];
-  }
-  std::cout << '\n';
-}
 
 int main() {
-  char array[] {"asd ds hghghg\0"};
-  
+  const int lenght = 8;
+  bool array[lenght] { 1, 0, 0, 1, 1, 0, 1, 0 };
+
+  int result = 0;
   int temp = 1;
-  int start = 0;
-  for (int i = 1; i < strlen(array); ++i) {
-    if ((array[i] == ' ' || array[i] == '\0') && temp % 2 == 0) {
-      print(&array[start], temp);
-      start = i;
-      temp = 0;
-    }
-    ++temp;
+
+  for (int i = lenght - 1; i > 0; --i) {
+    result += array[i] * temp;
+    temp *= 2;  
   }
+  
+  if (array[0]) {
+    result *= -1;
+  }
+
+  std::cout << "Result: " << result << '\n';
+  std::cout << '\n';
   return 0;
 }
