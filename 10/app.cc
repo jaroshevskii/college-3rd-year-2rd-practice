@@ -33,7 +33,7 @@ void readFile(const char* file) {
     result = calculate(result, oper, x);
   }
 
-  std::cout << result << '\n';
+  std::cout << "Result: " << result << '\n';
   std::cout << '\n';
 }
 
