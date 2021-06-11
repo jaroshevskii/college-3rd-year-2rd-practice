@@ -41,7 +41,6 @@ int main() {
   int index[iLenght] { 0, 1, 2};
   
   arraySorting(sum, index, iLenght);
-  //////////////////////////////////////////////////////
   
   for (int i = 0; i < iLenght; ++i) {
     for (int j = 0; j < jLenght; ++j) {
