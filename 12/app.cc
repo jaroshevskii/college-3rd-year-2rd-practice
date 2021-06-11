@@ -11,6 +11,17 @@ void arraySorting(int* array, int* index, const int& lenght) {
   }
 }
 
+int searchArraySum(const int* array, const int& lenght) {
+  int sum = 0;
+
+  for (int i = 0; i < lenght; ++i) {
+    if (array[i] < 0) {
+      sum += array[i];
+    }
+  }
+  return sum;
+}
+
 int main() {
   const int iLenght = 3;
   const int jLenght = 3;
@@ -20,22 +31,24 @@ int main() {
     { 2, -5, 1 },
     { 1, 1, 2}
   };
-
-  int sum[2][iLenght] {
-    { -10, -9, -3 },
-    { 0, 1, 2}
-  };
   
-  arraySorting(&sum[0][0], &sum[1][0], iLenght);
+  int sum[iLenght] { 0, 0, 0 };
+  
+  for (int i = 0; i < iLenght; ++i) {
+    sum[i] = searchArraySum(array[i], jLenght);
+  }
 
-  for (int i = 0; i < 2; ++i) {
-    for (int j = 0; j < iLenght; ++j) {
-      std::cout << sum[i][j] << ' ';
+  int index[iLenght] { 0, 1, 2};
+  
+  arraySorting(sum, index, iLenght);
+  //////////////////////////////////////////////////////
+  
+  for (int i = 0; i < iLenght; ++i) {
+    for (int j = 0; j < jLenght; ++j) {
+      std::cout << array[index[i]][j] << ' ';
     }
     std::cout << '\n';
   }
   std::cout << '\n';
-
-
   return 0;
 }

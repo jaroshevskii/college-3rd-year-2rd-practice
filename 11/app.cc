@@ -2,13 +2,15 @@
 
 int searchMaxValue(const int* array, const int& lenght) {
   int max = array[0];
+  int index = 0;
 
   for (int i = 0; i < lenght; ++i) {
-    if (abs(array[i]) > max) {
+    if (abs(array[i]) > abs(max)) {
       max = array[i];
+      index = i;
     }
   }
-  return max;
+  return index;
 }
 
 // Знаходження суми елементів масиву розташованих після максимального за модулем значення
@@ -18,11 +20,9 @@ void searchSumArray(const int* array, const int& lenght) {
   int counter = 0;
   
 
-  for (int i = 0; i < lenght; ++i) {
-    if (array[i] > max) {
+  for (int i = max + 1; i < lenght; ++i) {
       sum += array[i];
       ++counter;
-    }
   }
 
   std::cout << "Sum: " << sum << '\n' <<
@@ -42,7 +42,7 @@ void arraySorting(int* array, const int& lenght) {
 
 int main() {
   const int lenght = 5;
-  int array[lenght] { -4, 1, 3, 4, -6, };
+  int array[lenght] { -4, 10, 3, 4, -6 };
   
   // Знаходження суми елементів масиву розташованих після максимального за модулем значення
   searchSumArray(array, lenght);
