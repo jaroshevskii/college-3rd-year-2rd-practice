@@ -9,9 +9,9 @@ int main() {
   
   double x;
   if (a <= 1) {
-    x = 2 *a;
-  } else if ( a > 25) {
-    x = a /25;
+    x = a * 2;
+  } else if (a > 25) {
+    x = a / 25;
   } else {
     x = a / 5;
   }
@@ -24,6 +24,5 @@ int main() {
   } while (x <= 0.2 * abs(x - k));
   
   std::cout << "k: " << k << '\n';
-  
   return 0;
 }

@@ -14,7 +14,7 @@ int main() {
   const int lenght = 5;
 
   int a[lenght] { 9, 8, 7, 6, 5 };
-  int b[lenght] { 4, 3, 2, 1, 0 };
+  int b[lenght] { 4, -100, 2, 1, 0 };
 
   const int cLenght = 2 * lenght;
   int c[cLenght];
@@ -29,6 +29,7 @@ int main() {
   for (int i = 0; i < cLenght; ++i) {
     std::cout << c[i] << ' ';
   }
+  std::cout << '\n';
   std::cout << '\n';
   return 0;
 }

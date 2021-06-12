@@ -3,11 +3,10 @@
 
 int factorial(int max) {
   int sum = 1;
+
   for (int i = 1; i <= max; ++i) {
     sum *= i;
   }
-  std::cout << "SUM = " << sum << '\n';
-
   return sum;
 }
 
@@ -17,13 +16,12 @@ double th(double x) {
   for (int k = 0; k <= 5; ++k) {
     th1 = pow(x, 2 * k + 1) / factorial(2 * k + 1);
   }
-  std::cout << th1 << '\n';
+  
   double th2;
 
   for (int k = 1; k <= 5; ++k) {
     th2 = pow(x, 2 * k) / factorial(2 * k);
   }
-  std::cout << th2 << '\n';
   return th1 / th2;
 }
 

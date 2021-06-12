@@ -1,19 +1,5 @@
 #include <iostream>
 
-int getValue(const int minValue, const int maxValue) {
-  int value;
-
-  while (std::cin >> value) {
-    if (value >= minValue && value <= maxValue) {
-      return value;
-    } else {
-      std::cout << "ERROR: Entered value is not true\n"
-                   "> ";
-    }
-  }
-  return 0;
-}
-
 double searchAverageValue(const int* array, const int& lenght) {
   int sum = 0;
   for (int i = 0; i < lenght; ++i) {
