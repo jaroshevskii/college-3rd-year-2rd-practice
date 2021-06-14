@@ -26,7 +26,7 @@ void searchSumArray(const int* array, const int& lenght) {
   }
 
   std::cout << "Sum: " << sum << '\n' <<
-               "Counrer: " << counter << '\n';
+               "Counter: " << counter << '\n';
   std::cout << '\n';
 }
 
@@ -42,7 +42,7 @@ void arraySorting(int* array, const int& lenght) {
 
 int main() {
   const int lenght = 5;
-  int array[lenght] { -4, 10, 3, 4, -6 };
+  int array[lenght] { -1, 7, 1, 0, -6 };
   
   // Знаходження суми елементів масиву розташованих після максимального за модулем значення
   searchSumArray(array, lenght);

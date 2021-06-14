@@ -28,8 +28,8 @@ int main() {
 
   int array[iLenght][jLenght] {
     { 1, -4, -1 },
-    { 2, -5, 1 },
-    { 1, 1, 2}
+    { 2, -9, 1 },
+    { 1, 14, 2}
   };
   
   int sum[iLenght] { 0, 0, 0 };
